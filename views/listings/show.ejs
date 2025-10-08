@@ -1,0 +1,15 @@
+<% layout('./layouts/boilerplate') -%>
+<body>
+    <ul>
+        <li><%= data.title %></li>
+        <li><img src="<%= data.image%>" style="width: 150px;" alt=""></li>
+        <li><%= data.description%></li>
+        <li><%= data.price.toLocaleString("en-IN")%></li>
+        <li><%= data.location%></li>
+        <li><%= data.country%></li>
+        <a href="/listings/<%= data._id %>/edit" title="edit the form"><button>Edit</button></a>
+        <form method="POST" action="/listings/<%= data._id %>?_method=delete" id="deleteListing"><button>delete</button></form>
+    </ul>    
+</body>
+<script src="/show.js"></script>
+
