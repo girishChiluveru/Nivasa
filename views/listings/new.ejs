@@ -3,37 +3,48 @@
     <h3>Create new List</h3>
     <div class="row">
     <div class="col-8 offset-2">
-    <form method="POST" action="/listings" >
+    <form method="POST" action="/listings" novalidate class="needs-validation">
         <div class="mb-3">
             <label for="title" class="form-label">Title</label>
-            <input type="text" placeholder="Enter a catchy title" name="listings[title]" class="form-control">
+            <input type="text" placeholder="Enter a catchy title" name="listing[title]" class="form-control" required>
+            <div class="valid-feedback">Looks good title!</div>
+            <div class="invalid-feedback">Provide a valid title</div>
         </div>
         <div class="mb-3">
             <label for="image" class="form-label">Image Link</label>
-            <input type="text" name="listings[image]" placeholder="Enter URL of the image" class="form-control">
+            <input type="text" name="listing[image]" placeholder="Enter URL of the image" class="form-control" required>
         </div>
         
         <div class="mb-3">
             <label for="description" class="form-label">Description</label>
-            <textarea  type="text" name="listings[description]" class="form-control"></textarea>
+            <textarea  type="text" name="listing[description]" class="form-control"></textarea>
+            <div class="valid-feedback">Looks Good!</div>
+            <div class="invalid-feedback">Enter short description</div>
         </div>
         <div class="row">
             <div class="col-md-4" class="mb-3">
                 <label for="price" class="form-label">Price</label>
-                <input type="number" name="listings[price]" placeholder="2100" class="form-control">
+                <input type="number" name="listing[price]" placeholder="2100" class="form-control" required>
+                <div class="valid-feedback">Moderate prices attracts the tousrists</div>
+                <div class="invalid-feedback">price should should be valid</div>
             </div>
             <div class="col-md-8">
                 <label for="country" class="form-label">Country</label>
-                <input type="text" name="listings[country]" placeholder="China" class="form-control">
+                <input type="text" name="listing[country]" placeholder="China" class="form-control" required>
+                <div class="valid-feedback">made ur country proud</div>
+                <div class="invalid-feedback">country should should be valid</div>
             </div>
         </div>
         <div class="mb-3">
             <label for="location" class="form-label">Location</label>
-            <input type="text" name="listings[location]" placeholder="Kyoto,Japan" class="form-control">
+            <input type="text" name="listing[location]" placeholder="Kyoto,Japan" class="form-control" required>
+            <div class="valid-feedback">Accurate Locations Make good reach</div>
+            <div class="invalid-feedback">Location should should be valid</div>
         </div>
        
     <button class="btn btn-danger mb-3">Add</button>
     </form>
     </div>
     </div>
+    <script src="/js/script.js"></script>
 </body>
