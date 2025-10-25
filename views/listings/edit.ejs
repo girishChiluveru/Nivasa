@@ -6,39 +6,39 @@
     <form method="POST" action="/listings/<%=data._id%>?_method=PUT" novalidate class="needs-validation">
         <div class="mb-3">
             <label for="title" class="form-label">Title</label>
-            <input type="text" name="listings[title]" placeholder="Enter title" value="<%= data.title %>" class="form-control" required>
+            <input type="text" name="listing[title]" placeholder="Enter title" value="<%= data.title %>" class="form-control" required>
             <div class="valid-feedback">Looks Good!</div>
             <div class="invalid-feedback">Enter short description</div>
         </div>
         <div class="mb-3">
             <label for="image" class="form-label">Image url</label>
-            <input type="text" name="listings[image]" placeholder="Enter URL of the image" value="<%= data.image %>" class="form-control" required >
+            <input type="text" name="listing[image]" placeholder="Enter URL of the image" value="<%= data.image %>" class="form-control" required >
             <div class="invalid-feedback">Enter valid URL</div>
         </div>
         <div class="mb-3">
             <label for="description" class="form-label">Description</label>
-             <textarea  type="text" name="listings[description]" placeholder="Enter description" class="form-control" required><%= data.description %></textarea>
+             <textarea  type="text" name="listing[description]" placeholder="Enter description" class="form-control" required><%= data.description %></textarea>
              <div class="invalid-feedback">Cannot be empty</div>
         </div>
         <div class="row">
         <div class="mb-3 col-md-4">
             <label for="price" class="form-label">Price</label>
-            <input type="number" name="listings[price]" placeholder="enter price" value="<%= data.price %>" class="form-control" required>
+            <input type="number" name="listing[price]" placeholder="enter price" value="<%= data.price %>" class="form-control" required>
             <div class="invalid-feedback">Enter valid price</div>
         </div>
         
         <div class="mb-3 col-md-8">
             <label for="country"  class="form-label">Country</label>
-            <input type="text" name="listings[country]" placeholder="Enter Country" value="<%= data.country %>" class="form-control" required>
+            <input type="text" name="listing[country]" placeholder="Enter Country" value="<%= data.country %>" class="form-control" required>
             <div class="invalid-feedback">Enter valid country</div>
         </div>
         </div>
 
         <div class="mb-3">
             <label for="locatiom" class="form-label">Location</label>
-            <input type="text" name="listings[location]" placeholder="Enter Location" value="<%= data.location %>" class="form-control" required>
+            <input type="text" name="listing[location]" placeholder="Enter Location" value="<%= data.location %>" class="form-control" required>
         </div>
-        <button class="btn btn-success">Sumbit</button>
+        <button class="btn btn-success">Submit</button>
     </form>
     
     </div>
